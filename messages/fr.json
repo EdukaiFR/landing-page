@@ -8,6 +8,10 @@
     "getStarted": "Commencer",
     "documentation": "Documentation"
   },
+  "accessibility": {
+    "closeMenu": "Fermer le menu",
+    "openMenu": "Ouvrir le menu"
+  },
   "header": {
     "nav": {
       "features": "Fonctionnalités",
@@ -17,7 +21,8 @@
       "blog": "Blog"
     },
     "language": {
-      "label": "Changer de langue"
+      "label": "Changer de langue",
+      "french": "FR"
     },
     "cta": "Rejoindre la Beta"
   },

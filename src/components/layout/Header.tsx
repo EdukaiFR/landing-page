@@ -16,6 +16,7 @@ import { MobileMenu } from './MobileMenu';
  */
 export function Header() {
   const t = useTranslations('header');
+  const tA11y = useTranslations('accessibility');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -47,7 +48,7 @@ export function Header() {
               aria-label={t('language.label')}
               className="font-semibold"
             >
-              FR
+              {t('language.french')}
             </Button>
 
             <Button href="#beta" variant="primary" size="md">
@@ -59,6 +60,8 @@ export function Header() {
             <BurgerButton
               isOpen={isMobileMenuOpen}
               onClick={toggleMobileMenu}
+              ariaLabelOpen={tA11y('openMenu')}
+              ariaLabelClose={tA11y('closeMenu')}
             />
           </div>
         </div>

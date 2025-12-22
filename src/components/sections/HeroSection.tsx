@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl';
 
 import { ArrowCircleRightIcon, HeartIcon } from '@/components/icons';
 import { Button } from '@/components/ui';
+import { GRADIENTS } from '@/styles';
 
 /**
  * Hero section with badge, headline, description, and CTA buttons.
@@ -15,18 +16,14 @@ export function HeroSection() {
       {/* Badge */}
       <div
         className="flex h-12 items-center justify-center gap-2.5 rounded-full px-5 py-2"
-        style={{
-          backgroundImage:
-            'linear-gradient(65deg, rgba(37, 99, 235, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%)',
-        }}
+        style={{ backgroundImage: GRADIENTS.blueGlow }}
       >
         <HeartIcon className="h-5 w-5 shrink-0 text-red-500" />
         <span
           className="font-inter bg-clip-text text-sm font-semibold md:text-base"
           style={{
             WebkitTextFillColor: 'transparent',
-            backgroundImage:
-              'linear-gradient(46deg, rgb(37, 99, 235) 0%, rgb(59, 130, 246) 100%)',
+            backgroundImage: GRADIENTS.blueText,
           }}
         >
           {t('badge')}
@@ -34,16 +31,14 @@ export function HeroSection() {
       </div>
 
       {/* Headline */}
-      <h1 className="font-inter max-w-4xl text-4xl leading-tight font-semibold tracking-tight text-[#212121] md:text-5xl lg:text-6xl xl:text-[77px] xl:leading-[1.1]">
+      <h1 className="font-inter max-w-4xl text-4xl leading-tight font-semibold tracking-tight text-neutral-900 md:text-5xl lg:text-6xl xl:text-[77px] xl:leading-[1.1]">
         {t.rich('title', {
-          highlight: (chunks) => (
-            <span className="text-[#3678ff]">{chunks}</span>
-          ),
+          highlight: (chunks) => <span className="text-brand">{chunks}</span>,
         })}
       </h1>
 
       {/* Description */}
-      <div className="font-inter max-w-3xl text-base leading-relaxed tracking-tight text-[#212121]/80 md:text-lg lg:text-xl">
+      <div className="font-inter text-neutral-light max-w-3xl text-base leading-relaxed tracking-tight md:text-lg lg:text-xl">
         <p>{t('description.line1')}</p>
         <p>
           {t.rich('description.line2', {
