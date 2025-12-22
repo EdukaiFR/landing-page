@@ -97,7 +97,7 @@ import { formatDate, validateEmail, capitalize } from '@/utils';
 
 - **Feature-based folder structure** for scalable projects over type-based organization
 
-```
+```bash
 src/
 ├── features/
 │   ├── auth/
