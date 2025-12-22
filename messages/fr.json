@@ -40,12 +40,16 @@
   },
   "home": {
     "hero": {
-      "title": "Pour commencer, modifiez le fichier page.tsx.",
-      "description": "Vous cherchez un point de départ ou plus d'instructions ? Consultez les Templates ou le centre d'apprentissage."
-    },
-    "cta": {
-      "deploy": "Déployer",
-      "documentation": "Documentation"
+      "badge": "Par des étudiants, pour des étudiants",
+      "title": "Transforme n'importe quel cours en quiz, <highlight>en 30 secondes</highlight>",
+      "description": {
+        "line1": "Plus besoin de passer des heures à créer des fiches ou inventer des questions.",
+        "line2": "Edukai analyse et génère des quiz. <bold>Toi, tu révises. Nous, on prépare.</bold>"
+      },
+      "cta": {
+        "primary": "Rejoindre la Beta",
+        "secondary": "Euh, vous êtes qui ?"
+      }
     }
   }
 }
