@@ -19,12 +19,13 @@ export function Logo({ showText = true, size = 'md' }: LogoProps) {
   const { image, text } = SIZE_CONFIG[size];
 
   return (
-    <Link href="/" className="flex items-center gap-2">
+    <Link href="/" className="flex items-center gap-2 rounded-full">
       <Image
         src="/brand/LOGO - Edukai v2.svg"
         alt="Edukai"
         width={image}
         height={image}
+        className="rounded-full"
         priority
       />
       {showText && (

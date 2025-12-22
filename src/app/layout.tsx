@@ -3,7 +3,7 @@ import { Inter, Outfit } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages, getTranslations } from 'next-intl/server';
 
-import { Header } from '@/components';
+import { Footer, Header } from '@/components';
 
 import type { Metadata } from 'next';
 
@@ -43,6 +43,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>

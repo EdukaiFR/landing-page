@@ -21,6 +21,23 @@
     },
     "cta": "Rejoindre la Beta"
   },
+  "footer": {
+    "tagline": "Toi tu révises, nous on prépare.",
+    "badge": "Par des étudiants, pour des étudiants",
+    "sections": {
+      "pages": "Pages",
+      "social": "Suivez nous sur les réseaux"
+    },
+    "nav": {
+      "home": "Accueil"
+    },
+    "legal": {
+      "terms": "Mentions Légales",
+      "privacy": "Politique de confidentialité"
+    },
+    "madeWith": "Fait avec",
+    "copyright": "©Copyright {year} Edukai"
+  },
   "home": {
     "hero": {
       "title": "Pour commencer, modifiez le fichier page.tsx.",
