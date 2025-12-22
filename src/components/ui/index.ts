@@ -6,9 +6,6 @@
  * import { Button } from '@/components/ui';
  */
 
-// Placeholder export - remove when adding first component
-export {};
-
-// Export UI components here as they are created
-// export { Button } from './button';
-// export { Card } from './card';
+export { Button } from './Button';
+export { Logo } from './Logo';
+export { NavLink } from './NavLink';
