@@ -6,4 +6,6 @@
  * import type { ApiResponse, User } from '@/types';
  */
 
+import './i18n.types';
+
 export * from './common.types';

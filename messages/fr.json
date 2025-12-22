@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "title": "Edukai - Plateforme d'apprentissage",
+    "description": "Edukai est une plateforme innovante qui transforme votre apprentissage."
+  },
+  "common": {
+    "learnMore": "En savoir plus",
+    "getStarted": "Commencer",
+    "documentation": "Documentation"
+  },
+  "home": {
+    "hero": {
+      "title": "Pour commencer, modifiez le fichier page.tsx.",
+      "description": "Vous cherchez un point de départ ou plus d'instructions ? Consultez les Templates ou le centre d'apprentissage."
+    },
+    "cta": {
+      "deploy": "Déployer",
+      "documentation": "Documentation"
+    }
+  }
+}
