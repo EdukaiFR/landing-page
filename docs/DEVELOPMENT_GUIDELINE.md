@@ -32,7 +32,7 @@ const calculateTotalPrice = (
 ## No Hardcoding
 
 - **Never hardcode strings, numbers, or configuration values** directly in components or pages
-- **Use `next-intl` or similar** for all user-facing text with dedicated `.json` translation files
+- **Use `next-intl`** for all user-facing text with dedicated `.json` translation files
 - **Centralize AI prompts, instructions, and templates** in separate files (e.g., `prompts/`, `templates/`)
 - **Use environment variables** for configuration that changes between environments
 - **Extract magic numbers** into named constants with clear meaning
@@ -45,6 +45,108 @@ if (users.length > 50) { ... }
 const MAX_USERS_PER_PAGE = 50;
 if (users.length > MAX_USERS_PER_PAGE) { ... }
 ```
+
+---
+
+## Internationalization (i18n)
+
+This project uses **next-intl** for internationalization. All user-facing text must use translation keys.
+
+### File Structure
+
+```text
+messages/
+└── fr.json           # French translations (only language for now)
+src/
+├── i18n/
+│   ├── config.ts     # Locales configuration
+│   ├── request.ts    # Server-side request handler
+│   └── index.ts      # Barrel export
+```
+
+### Translation File Structure
+
+Organize translations by feature/page with nested namespaces:
+
+```json
+{
+  "metadata": {
+    "title": "Page title",
+    "description": "Page description"
+  },
+  "common": {
+    "actions": {
+      "save": "Save",
+      "cancel": "Cancel"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Welcome",
+      "description": "Description text"
+    }
+  }
+}
+```
+
+### Usage in Components
+
+**Server Components** (default):
+
+```tsx
+import { useTranslations } from 'next-intl';
+
+export default function HomePage() {
+  const t = useTranslations('home');
+  return <h1>{t('hero.title')}</h1>;
+}
+```
+
+**Client Components** (`"use client"`):
+
+```tsx
+'use client';
+import { useTranslations } from 'next-intl';
+
+export default function Counter() {
+  const t = useTranslations('counter');
+  return <button>{t('increment')}</button>;
+}
+```
+
+**Metadata** (layout/page):
+
+```tsx
+import { getTranslations } from 'next-intl/server';
+
+export async function generateMetadata() {
+  const t = await getTranslations('metadata');
+  return { title: t('title') };
+}
+```
+
+### Rich Text & Interpolation
+
+```tsx
+// messages/fr.json
+{
+  "welcome": "Bonjour {name}!",
+  "terms": "Acceptez nos <link>conditions</link>"
+}
+
+// Component
+t('welcome', { name: 'John' });
+t.rich('terms', {
+  link: (chunks) => <a href="/terms">{chunks}</a>
+});
+```
+
+### Best Practices
+
+- **Use namespaces** — group translations by feature (`home.hero.title` not `homeHeroTitle`)
+- **Keep keys semantic** — use `actions.save` not `button1`
+- **French only (for now)** — only create/modify `messages/fr.json`, do NOT create other language files until explicitly requested
+- **Type safety** — the `IntlMessages` global type provides autocompletion
 
 ---
 
