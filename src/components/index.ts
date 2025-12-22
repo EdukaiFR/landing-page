@@ -6,5 +6,8 @@
  * import { Button, Card } from '@/components';
  */
 
+// Layout Components
+export * from './layout';
+
 // UI Components
 export * from './ui';
