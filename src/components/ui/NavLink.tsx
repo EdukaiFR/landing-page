@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 interface NavLinkProps extends Omit<ComponentProps<typeof Link>, 'className'> {
   isActive?: boolean;
+  className?: string;
 }
 
 const BASE_STYLES =
@@ -14,13 +15,15 @@ const BASE_STYLES =
  */
 export function NavLink({
   isActive = false,
+  className = '',
   children,
   ...props
 }: NavLinkProps) {
-  const className = `${BASE_STYLES} ${isActive ? 'text-blue-600' : ''}`.trim();
+  const combinedClassName =
+    `${BASE_STYLES} ${isActive ? 'text-blue-600' : ''} ${className}`.trim();
 
   return (
-    <Link className={className} {...props}>
+    <Link className={combinedClassName} {...props}>
       {children}
     </Link>
   );
