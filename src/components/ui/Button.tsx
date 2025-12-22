@@ -2,7 +2,7 @@ import type { ComponentProps, ReactNode } from 'react';
 
 import Link from 'next/link';
 
-type ButtonVariant = 'primary' | 'ghost';
+type ButtonVariant = 'primary' | 'outline' | 'ghost';
 type ButtonSize = 'sm' | 'md' | 'lg';
 
 interface ButtonBaseProps {
@@ -27,17 +27,19 @@ type ButtonProps = ButtonAsButton | ButtonAsLink;
 const VARIANT_STYLES: Record<ButtonVariant, string> = {
   primary:
     'bg-gradient-to-r from-blue-600 to-blue-500 text-white hover:opacity-90',
+  outline:
+    'bg-white border border-[#333]/20 text-[#343a40] hover:border-blue-500 hover:text-blue-600',
   ghost: 'bg-transparent text-[#333] hover:text-blue-600',
 } as const;
 
 const SIZE_STYLES: Record<ButtonSize, string> = {
   sm: 'h-8 px-3 text-xs',
   md: 'h-9 px-4 text-sm',
-  lg: 'h-11 px-6 text-base',
+  lg: 'h-12 px-5 text-base',
 } as const;
 
 const BASE_STYLES =
-  'inline-flex items-center justify-center rounded-full font-inter font-normal tracking-[-0.42px] transition-all';
+  'inline-flex items-center justify-center gap-2.5 rounded-full font-inter font-semibold tracking-[-0.48px] transition-all';
 
 /**
  * Reusable Button component with multiple variants and sizes.

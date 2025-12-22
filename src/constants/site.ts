@@ -9,12 +9,6 @@ export const SITE_CONFIG = {
   locale: 'fr-FR',
 } as const;
 
-export const SOCIAL_LINKS = {
-  twitter: 'https://twitter.com/edukai',
-  linkedin: 'https://linkedin.com/company/edukai',
-  github: 'https://github.com/edukai',
-} as const;
-
 /**
  * Navigation routes
  */

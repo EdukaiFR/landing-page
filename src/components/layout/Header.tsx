@@ -5,16 +5,9 @@ import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { BurgerButton, Button, Logo, NavLink } from '@/components/ui';
+import { NAV_ITEMS } from '@/constants';
 
 import { MobileMenu } from './MobileMenu';
-
-const NAV_ITEMS = [
-  'features',
-  'howItWorks',
-  'pricing',
-  'about',
-  'blog',
-] as const;
 
 /**
  * Main header/navigation component for the landing page.
@@ -40,9 +33,9 @@ export function Header() {
           <Logo />
 
           <nav className="hidden items-center gap-7.5 md:flex">
-            {NAV_ITEMS.map((item) => (
-              <NavLink key={item} href={`#${item}`}>
-                {t(`nav.${item}`)}
+            {NAV_ITEMS.map(({ key, href }) => (
+              <NavLink key={key} href={href}>
+                {t(`nav.${key}`)}
               </NavLink>
             ))}
           </nav>

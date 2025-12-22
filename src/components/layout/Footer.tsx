@@ -1,3 +1,5 @@
+import type { ComponentType, SVGProps } from 'react';
+
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -10,29 +12,20 @@ import {
   TikTokIcon,
 } from '@/components/icons';
 import { NavLink, SocialIcon } from '@/components/ui';
+import {
+  FOOTER_NAV_ITEMS,
+  SOCIAL_LINKS,
+  type SocialPlatform,
+} from '@/constants';
 
-const NAV_ITEMS = [
-  { key: 'home', href: '/' },
-  { key: 'features', href: '#features' },
-  { key: 'howItWorks', href: '#howItWorks' },
-  { key: 'pricing', href: '#pricing' },
-  { key: 'about', href: '#about' },
-  { key: 'blog', href: '#blog' },
-] as const;
-
-const SOCIAL_LINKS = [
-  {
-    Icon: InstagramIcon,
-    href: 'https://instagram.com/edukai',
-    label: 'Instagram',
-  },
-  { Icon: TikTokIcon, href: 'https://tiktok.com/@edukai', label: 'TikTok' },
-  {
-    Icon: LinkedInIcon,
-    href: 'https://linkedin.com/company/edukai',
-    label: 'LinkedIn',
-  },
-] as const;
+const SOCIAL_ICONS: Record<
+  SocialPlatform,
+  ComponentType<SVGProps<SVGSVGElement>>
+> = {
+  instagram: InstagramIcon,
+  tiktok: TikTokIcon,
+  linkedin: LinkedInIcon,
+};
 
 /**
  * Footer component with brand info, navigation, social links, and legal info.
@@ -85,7 +78,7 @@ export function Footer() {
               {t('sections.pages')}
             </span>
             <nav className="flex flex-col gap-2">
-              {NAV_ITEMS.map(({ key, href }) => (
+              {FOOTER_NAV_ITEMS.map(({ key, href }) => (
                 <NavLink
                   key={key}
                   href={href}
@@ -104,11 +97,14 @@ export function Footer() {
                 {t('sections.social')}
               </span>
               <div className="flex items-center gap-6">
-                {SOCIAL_LINKS.map(({ Icon, href, label }) => (
-                  <SocialIcon key={label} href={href} label={label}>
-                    <Icon className="h-6 w-6" />
-                  </SocialIcon>
-                ))}
+                {SOCIAL_LINKS.map(({ platform, href, label }) => {
+                  const Icon = SOCIAL_ICONS[platform];
+                  return (
+                    <SocialIcon key={label} href={href} label={label}>
+                      <Icon className="h-6 w-6" />
+                    </SocialIcon>
+                  );
+                })}
               </div>
             </div>
 

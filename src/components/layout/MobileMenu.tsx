@@ -5,15 +5,8 @@ import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 import { Button, NavLink } from '@/components/ui';
+import { NAV_ITEMS } from '@/constants';
 import { useScrollLock } from '@/hooks';
-
-const NAV_ITEMS = [
-  'features',
-  'howItWorks',
-  'pricing',
-  'about',
-  'blog',
-] as const;
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -102,14 +95,14 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           {/* Navigation */}
           <nav className="flex-1 px-6 py-6">
             <ul className="space-y-1">
-              {NAV_ITEMS.map((item) => (
-                <li key={item}>
+              {NAV_ITEMS.map(({ key, href }) => (
+                <li key={key}>
                   <NavLink
-                    href={`#${item}`}
+                    href={href}
                     onClick={onClose}
                     className="block rounded-lg px-3 py-3 text-base hover:bg-gray-50"
                   >
-                    {t(`nav.${item}`)}
+                    {t(`nav.${key}`)}
                   </NavLink>
                 </li>
               ))}
