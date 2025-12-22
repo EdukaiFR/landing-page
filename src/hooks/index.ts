@@ -3,9 +3,7 @@
  * Contains reusable React hooks
  *
  * @example
- * import { useMediaQuery } from '@/hooks';
+ * import { useScrollLock } from '@/hooks';
  */
 
-// Export hooks here as they are created
-// export { useMediaQuery } from './use-media-query';
-// export { useLocalStorage } from './use-local-storage';
+export { useScrollLock } from './useScrollLock';
