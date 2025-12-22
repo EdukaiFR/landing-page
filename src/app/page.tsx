@@ -1,4 +1,10 @@
-import { HeroSection, VideoShowcase } from '@/components';
+import {
+  FeaturesSection,
+  HeroSection,
+  HowItWorksSection,
+  PainPointsSection,
+  VideoShowcase,
+} from '@/components';
 
 export default function Home() {
   return (
@@ -6,6 +12,9 @@ export default function Home() {
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-10 xl:px-16">
         <HeroSection />
         <VideoShowcase />
+        <PainPointsSection />
+        <FeaturesSection />
+        <HowItWorksSection />
       </div>
     </main>
   );

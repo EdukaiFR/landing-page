@@ -7,11 +7,11 @@
  * Main navigation items used in Header and Footer
  */
 export const NAV_ITEMS = [
-  { key: 'features', href: '#features' },
-  { key: 'howItWorks', href: '#howItWorks' },
-  { key: 'pricing', href: '#pricing' },
-  { key: 'about', href: '#about' },
-  { key: 'blog', href: '#blog' },
+  { key: 'features', href: '/features' },
+  { key: 'howItWorks', href: '/how-it-works' },
+  { key: 'pricing', href: '/pricing' },
+  { key: 'about', href: '/about' },
+  { key: 'blog', href: '/blog' },
 ] as const;
 
 /**

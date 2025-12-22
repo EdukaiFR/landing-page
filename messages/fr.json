@@ -55,6 +55,464 @@
         "primary": "Rejoindre la Beta",
         "secondary": "Euh, vous êtes qui ?"
       }
+    },
+    "painPoints": {
+      "title": "Tu passes des heures à préparer tes supports sans <highlight>résultats</highlight> ?",
+      "subtitle": "Finis le stress de réviser à la dernière minute avec des supports incomplets",
+      "items": {
+        "manualSupports": "Créer manuellement tes supports",
+        "wastedHours": "Perdre des heures à organiser",
+        "noTime": "Ne pas avoir assez de temps",
+        "noMethodology": "Réviser sans méthodologie"
+      }
+    },
+    "features": {
+      "title": "Révise mieux, <highlight>pas plus</highlight>",
+      "subtitle": "Qui a dit qu'il fallait réviser plus pour réussir ? Certainement pas nous.",
+      "items": {
+        "generateSupports": {
+          "title": "Génère tes supports avec tes cours",
+          "description": "Arrête de réviser un cours trouvé sur internet. Edukai génère le contenu en fonction de ton cours, et ça en quelques secondes seulement."
+        },
+        "trackProgress": {
+          "title": "Suis ta progression",
+          "description": "Comment savoir si tu révises efficacement ? Grâce à tout un tas de statistiques, visualise facilement tes points forts et lacunes pour t'améliorer."
+        },
+        "communityCourses": {
+          "title": "Il te manque des cours ?",
+          "description": "Profite de la communauté Edukai où tu pourras accéder à tous les cours rendus publics par nos utilisateurs. Le partage de connaissance est la base même de l'éducation !"
+        }
+      },
+      "cta": "Rejoindre la Beta Edukai"
+    },
+    "howItWorks": {
+      "title": "Simple, comme <highlight>1, 2, 3, 4 !</highlight>",
+      "subtitle": "En quelques clics, transforme n'importe quel contenu de cours en expérience d'apprentissage interactive et personnalisée."
+    }
+  },
+  "featuresPage": {
+    "metadata": {
+      "title": "Fonctionnalités - Edukai",
+      "description": "Découvrez toutes les fonctionnalités d'Edukai pour transformer votre façon de réviser."
+    },
+    "hero": {
+      "badge": "Par des étudiants, pour des étudiants",
+      "title": "Transforme ta façon de réviser, <highlight>avec Edukai</highlight>",
+      "description": {
+        "line1": "Plus besoin de passer des heures à créer des fiches ou inventer des questions.",
+        "line2": "Edukai analyse et génère des quiz. Toi, tu révises. Nous, on prépare."
+      }
+    },
+    "revolution": {
+      "title": "Révolutionne simplement ta <highlight>façon d'étudier</highlight>",
+      "subtitle": {
+        "line1": "Le monde progresse et les technologies aussi, alors pourquoi réviser comme avant ?",
+        "line2": "Fini les heures à préparer ses supports dans le vide."
+      },
+      "traditional": {
+        "alt": "Méthode traditionnelle de révision"
+      },
+      "edukai": {
+        "alt": "Révision avec Edukai"
+      }
+    },
+    "formats": {
+      "title": "Peu importe tes cours <highlight>on gère tous les formats</highlight>",
+      "subtitle": "Importe tes cours dans le format qui te convient. Notre technologie s'adapte à <bold>tous vos besoins</bold>."
+    }
+  },
+  "pricingPage": {
+    "metadata": {
+      "title": "Tarifs - Edukai",
+      "description": "Découvrez nos offres et commencez à réviser intelligemment avec Edukai."
+    },
+    "hero": {
+      "badge": "Plan transparent",
+      "title": "Prêt à <highlight>booster</highlight> tes révisions ?",
+      "subtitle": "Accédez gratuitement • Aucune carte de crédit • Sans engagement",
+      "billing": {
+        "monthly": "Mensuel",
+        "annual": "Annuel"
+      }
+    },
+    "plans": {
+      "hobby": {
+        "name": "Hobby",
+        "description": "Découvre Edukai, sans aucun risque, sans rien payer.",
+        "free": "GRATUIT",
+        "period": "à vie",
+        "cta": "Choisir ce plan",
+        "featuresTitle": "Ce que tu auras :",
+        "features": {
+          "0": "10 questions générées par cours",
+          "1": "Une petite fiche de révisions",
+          "2": "Des statistiques sur un cours"
+        },
+        "info": "Le plan idéal pour tester l'outil, sans aucune carte de crédit. Tu pourras toujours changer de plan plus tard !"
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "Tu vas passer au niveau supérieur, ton objectif est de réussir ton année.",
+        "badge": "Le plus populaire",
+        "period": "/ mois",
+        "cta": "Disponible à la Beta",
+        "featuresTitle": "Ce que tu auras :",
+        "features": {
+          "0": "20 questions générées par cours",
+          "1": "Une fiche de révision plus élaborée",
+          "2": "Des statistiques avancées",
+          "3": "Accès à la communauté Edukai",
+          "4": "Plan de révision personnalisé"
+        },
+        "info": "Annulable à tout moment, paiement annuel : 72€ HT"
+      },
+      "family": {
+        "name": "Famille",
+        "description": "Gérer l'apprentissage de sa famille avec un accès parents ainsi que 2 comptes enfants.",
+        "period": "/ mois",
+        "extraChild": "+ 5€ / mois par enfant supplémentaire",
+        "cta": "Bientôt disponible",
+        "featuresTitle": "Le plan Premium par enfant, plus :",
+        "features": {
+          "0": "Un panel de gestion parent",
+          "1": "Créer des objectifs par enfant",
+          "2": "Visualiser leur progression",
+          "3": "Accès à leur temps d'activité",
+          "4": "Mettre en place des routines"
+        },
+        "servicesTitle": "Services :",
+        "services": {
+          "0": "Un compte parent dédié",
+          "1": "Support prioritaire par chat"
+        },
+        "info": "Annulable à tout moment, paiement annuel : 180€ HT"
+      },
+      "betaNote": "Seul le plan gratuit est disponible actuellement. Les plans payants seront disponibles à partir de la Beta !"
+    },
+    "comparison": {
+      "title": "Compare les fonctionnalités",
+      "subtitle": "Trouve le plan qui correspond à tes besoins",
+      "headers": {
+        "features": "Fonctionnalités",
+        "hobby": "Hobby",
+        "premium": "Premium",
+        "family": "Famille"
+      },
+      "features": {
+        "questionsGenerated": "Questions générées",
+        "revisionSheets": "Fiches de révision",
+        "advancedStats": "Statistiques avancées",
+        "revisionMethods": "Alertes de révision",
+        "parentDashboard": "Portail de gestion parent",
+        "prioritySupport": "Support prioritaire",
+        "communityAccess": "Accès communauté"
+      }
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "items": {
+        "0": {
+          "question": "Puis-je changer de plan à tout moment ?",
+          "answer": "Oui, tu peux passer à un plan supérieur à tout moment depuis ton compte. Pour rétrograder, tu devras attendre la fin de ta période de facturation en cours."
+        },
+        "1": {
+          "question": "Y a-t-il un engagement ?",
+          "answer": "Pour le plan mensuel, aucun engagement ! Tu peux annuler à tout moment. Pour le plan annuel, il y a un engagement d'un an car le paiement est effectué en une seule fois à l'avance."
+        },
+        "2": {
+          "question": "Quels moyens de paiement acceptez-vous ?",
+          "answer": "Nous acceptons les cartes bancaires, PayPal et les virements SEPA."
+        },
+        "3": {
+          "question": "Puis-je essayer Premium gratuitement ?",
+          "answer": "Oui ! Tu bénéficies de 14 jours d'essai gratuit pour tester toutes les fonctionnalités Premium."
+        }
+      }
+    },
+    "cta": {
+      "title": "Commence dès aujourd'hui",
+      "subtitle": "Rejoins la Beta et bénéficie de 6 mois gratuits",
+      "button": "Rejoindre la Beta"
+    }
+  },
+  "aboutPage": {
+    "metadata": {
+      "title": "À propos - Edukai",
+      "description": "Découvrez l'histoire d'Edukai, une plateforme créée par des étudiants pour des étudiants."
+    },
+    "hero": {
+      "badge": "Par des étudiants, pour des étudiants",
+      "title": "<highlight>Edukai</highlight>, pour et par des étudiants",
+      "description": {
+        "bold": "Trois étudiants, un besoin, pas de solution. Alors on l'a créée : des supports de révision personnalisés selon ton cours et ton profil.",
+        "regular": "Alsaciens et convaincus que la pédagogie doit évoluer. Pourquoi l'étudiant devrait s'adapter à l'école et pas l'inverse ? Notre objectif : te faire gagner du temps pour te concentrer sur ce qui compte vraiment."
+      },
+      "cta": "Rejoindre la Beta"
+    },
+    "story": {
+      "title": "Né d'une <highlight>frustration</highlight>",
+      "subtitle": "Pourquoi préparer ses révisions devrait prendre aussi longtemps ? Car tu dois le faire à la main.",
+      "steps": {
+        "ideation": {
+          "badge": "Étape 1",
+          "title": "L'idéation",
+          "paragraphs": {
+            "0": "En 3ème année d'études, on devait commencer notre \"projet de fin d'étude\".",
+            "1": "Mais quoi faire ? Comment trouver une idée qui allait nous motiver pendant 3 ans ? Comment aider des personnes à aller plus vite, plus loin ?",
+            "2": "C'est là qu'est né Edukai, Eduk pour l'éducation et Ai pour l'intelligence artificielle. Le tout, derrière notre fameuse mascotte : Pingus, votre fidèle compagnon d'étude.",
+            "3": "L'objectif est simple : faire de l'éducation un domaine plus sympa, où l'entraide revient au premier plan."
+          }
+        },
+        "prototype": {
+          "badge": "Étape 2",
+          "title": "Le prototype",
+          "paragraphs": {
+            "0": "Le programme était simple : développer une toute première version en 3 jours, la tester et surtout la faire tester.",
+            "1": "Oui, c'était moche. Oui, c'était lent.",
+            "2": "Mais le plus important : ça fonctionnait, les utilisateurs l'appréciaient, et tout ça en 3 jours.",
+            "3": "À ce moment-là on s'est regardés : \"On tient quelque chose de cool là, imagine ce qu'on arrivera à faire au bout de plusieurs mois de travail !\""
+          }
+        },
+        "development": {
+          "badge": "Étape 3",
+          "title": "Le développement",
+          "paragraphs": {
+            "0": "Ensuite, il a fallu tout repenser de zéro, parce que OK ça fonctionnait, mais il fallait penser à l'avenir. Comment rendre la solution la plus simple et agréable à utiliser ?",
+            "1": "Après de très nombreuses maquettes (très moches pour la plupart), des schémas, des flèches dans tous les sens... On avait enfin terminé d'imaginer pleinement la solution. Plus qu'à développer !",
+            "2": "C'est là que le challenge a commencé : trois étudiants, sur trois continents différents, qui devaient sans aucune expérience développer une solution professionnelle.",
+            "3": "Alors oui, il y a eu des engueulades, des réunions à 3h du matin, des nuits blanches, beaucoup de cafés... Mais la solution était enfin prête pour passer à l'étape supérieure : la Beta !"
+          }
+        }
+      }
+    },
+    "founders": {
+      "title": "Les <highlight>fondateurs</highlight>",
+      "subtitle": "Des potes, devenus CEO. Tout simplement.",
+      "members": {
+        "0": {
+          "name": "Tristan Hourtoulle",
+          "role": "CEO & Co-fondateur",
+          "specialty": "Product & Design"
+        },
+        "1": {
+          "name": "Khalid Belkassmi E.H.",
+          "role": "CTO & Co-fondateur",
+          "specialty": "Engineering & AI"
+        },
+        "2": {
+          "name": "Lucas Rossignon",
+          "role": "CPO & Co-fondateur",
+          "specialty": "Education & UX"
+        }
+      }
+    },
+    "values": {
+      "title": "Nos <highlight>valeurs</highlight>",
+      "items": {
+        "passion": {
+          "title": "Passion",
+          "description": "Nous sommes passionnés par l'éducation et croyons en son pouvoir transformateur."
+        },
+        "community": {
+          "title": "Communauté",
+          "description": "L'entraide et le partage sont au cœur de notre vision de l'apprentissage."
+        },
+        "excellence": {
+          "title": "Excellence",
+          "description": "Nous visons l'excellence dans chaque fonctionnalité pour maximiser ton succès."
+        }
+      }
+    },
+    "cta": {
+      "title": "Rejoins l'aventure !",
+      "subtitle": "Fais partie des premiers utilisateurs et aide-nous à façonner l'avenir de l'éducation",
+      "button": "Rejoindre la Beta",
+      "madeIn": "Fait avec amour (et beaucoup de café) en Alsace"
+    }
+  },
+  "howItWorksPage": {
+    "metadata": {
+      "title": "Comment ça marche - Edukai",
+      "description": "Découvrez comment Edukai transforme vos cours en supports de révision intelligents."
+    },
+    "hero": {
+      "badge": "Fonctionnalités clés en un clic",
+      "title": "Tout ce dont tu as besoin pour <highlight>réussir</highlight>",
+      "subtitle": "Des outils puissants et intelligents pour transformer ta façon de réviser et maximiser tes résultats."
+    },
+    "mainFeatures": {
+      "aiGeneration": {
+        "title": "Génération instantanée par IA",
+        "description": "Notre intelligence artificielle analyse tes cours en profondeur et génère automatiquement quiz, flashcards et fiches de révision adaptés à ton niveau.",
+        "features": {
+          "0": "Traitement en moins de 30 secondes",
+          "1": "Support tous formats (PDF, Word, images, texte)",
+          "2": "Résultats contextualisés et pertinents",
+          "3": "Adaptation automatique à ta matière"
+        }
+      },
+      "smartLearning": {
+        "title": "Apprentissage intelligent",
+        "description": "Algorithme adaptatif qui apprend de tes réponses pour personnaliser chaque session de révision et maximiser ta mémorisation.",
+        "features": {
+          "0": "Répétition espacée scientifique",
+          "1": "Difficulté ajustée en temps réel",
+          "2": "Focus sur tes points faibles",
+          "3": "Optimisation de la rétention"
+        }
+      }
+    },
+    "moreFeatures": {
+      "title": "Et bien plus encore",
+      "subtitle": "Des fonctionnalités pensées pour faciliter ta réussite au quotidien",
+      "items": {
+        "timeSaving": {
+          "title": "Gain de temps",
+          "description": "Génère des supports en 30 secondes au lieu de plusieurs heures"
+        },
+        "personalization": {
+          "title": "Personnalisation",
+          "description": "Contenu adapté à ton niveau et ton style d'apprentissage"
+        },
+        "sharing": {
+          "title": "Partage facilité",
+          "description": "Partage tes supports avec tes camarades de classe"
+        },
+        "pdfExport": {
+          "title": "Export PDF",
+          "description": "Télécharge tes fiches pour réviser hors ligne"
+        },
+        "security": {
+          "title": "Données sécurisées",
+          "description": "Tes cours sont stockés de manière sécurisée et privée"
+        },
+        "updates": {
+          "title": "Mises à jour continues",
+          "description": "Nouvelles fonctionnalités ajoutées régulièrement"
+        },
+        "tips": {
+          "title": "Conseils intelligents",
+          "description": "Recommandations personnalisées pour mieux réviser"
+        },
+        "badges": {
+          "title": "Système de badges",
+          "description": "Reste motivé avec des objectifs et récompenses"
+        },
+        "collaboration": {
+          "title": "Mode collaboratif",
+          "description": "Révise avec tes amis en temps réel"
+        }
+      }
+    },
+    "stats": {
+      "courses": {
+        "value": "10,000+",
+        "label": "Cours transformés"
+      },
+      "students": {
+        "value": "500+",
+        "label": "Étudiants actifs"
+      },
+      "successRate": {
+        "value": "95%",
+        "label": "Taux de réussite"
+      },
+      "rating": {
+        "value": "4.9/5",
+        "label": "Note moyenne"
+      }
+    },
+    "cta": {
+      "title": "Prêt à révolutionner tes révisions ?",
+      "subtitle": "Rejoins les centaines d'étudiants qui ont déjà amélioré leurs résultats",
+      "button": "Commencer gratuitement",
+      "note": "Accès à la Beta gratuit • Pas de carte de crédit • Sans engagement"
+    }
+  },
+  "blogPage": {
+    "metadata": {
+      "title": "Blog - Edukai",
+      "description": "Conseils et astuces pour réussir tes études. Découvre nos articles sur l'apprentissage et la méthodologie."
+    },
+    "hero": {
+      "badge": "Blog Edukai",
+      "title": "Conseils & astuces pour <highlight>réussir</highlight>",
+      "subtitle": "Découvre nos articles sur l'apprentissage, la méthodologie et la réussite scolaire",
+      "searchPlaceholder": "Rechercher un article..."
+    },
+    "categories": {
+      "all": "Tous",
+      "methodology": "Méthodologie",
+      "innovation": "Innovation",
+      "productivity": "Productivité",
+      "wellbeing": "Bien-être",
+      "tips": "Conseils",
+      "organization": "Organisation"
+    },
+    "featured": {
+      "badge": "Article à la une",
+      "category": "Méthodologie",
+      "title": "10 techniques scientifiquement prouvées pour mieux mémoriser",
+      "description": "La révision validées par la recherche en neurosciences pour maximiser la rétention d'informations.",
+      "author": "Thomas Martin",
+      "date": "15 Décembre 2025",
+      "readTime": "8 min",
+      "cta": "Lire l'article"
+    },
+    "articles": {
+      "title": "Derniers articles",
+      "viewAll": "Populaires",
+      "items": {
+        "0": {
+          "category": "Innovation",
+          "title": "Comment l'IA révolutionne l'apprentissage",
+          "description": "L'intelligence artificielle transforme la façon dont nous apprenons. Voici comment en tirer parti.",
+          "author": "Lucas",
+          "readTime": "6 min"
+        },
+        "1": {
+          "category": "Productivité",
+          "title": "La méthode Pomodoro adaptée aux révisions",
+          "description": "Optimise ton temps de révision avec cette technique de gestion du temps ultra efficace.",
+          "author": "Marie",
+          "readTime": "5 min"
+        },
+        "2": {
+          "category": "Méthodologie",
+          "title": "Pourquoi les flashcards sont si efficaces ?",
+          "description": "La science derrière l'une des méthodes de révision les plus populaires et comment les utiliser.",
+          "author": "Thomas",
+          "readTime": "7 min"
+        },
+        "3": {
+          "category": "Bien-être",
+          "title": "Gérer le stress des examens : guide complet",
+          "description": "Des stratégies concrètes pour rester zen et performant pendant la période d'examens.",
+          "author": "Marie",
+          "readTime": "8 min"
+        },
+        "4": {
+          "category": "Conseils",
+          "title": "Les erreurs à éviter lors de tes révisions",
+          "description": "Découvre les pièges les plus courants qui sabotent ton efficacité et comment les éviter.",
+          "author": "Lucas",
+          "readTime": "6 min"
+        },
+        "5": {
+          "category": "Organisation",
+          "title": "Comment créer un planning de révision efficace",
+          "description": "Les secrets d'un planning de révision qui marche vraiment et comment le tenir.",
+          "author": "Thomas",
+          "readTime": "6 min"
+        }
+      }
+    },
+    "newsletter": {
+      "title": "Reçois nos meilleurs conseils",
+      "description": "Inscris-toi à notre newsletter et reçois chaque semaine des tips exclusifs pour booster tes révisions.",
+      "placeholder": "ton-email@exemple.com",
+      "button": "S'inscrire",
+      "note": "Pas de spam, que du contenu en qualité • Désabonnement en 1 clic"
     }
   }
 }
