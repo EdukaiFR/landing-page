@@ -8,6 +8,19 @@
     "getStarted": "Commencer",
     "documentation": "Documentation"
   },
+  "header": {
+    "nav": {
+      "features": "Fonctionnalités",
+      "howItWorks": "Comment ça marche",
+      "pricing": "Tarifs",
+      "about": "À propos",
+      "blog": "Blog"
+    },
+    "language": {
+      "label": "Changer de langue"
+    },
+    "cta": "Rejoindre la Beta"
+  },
   "home": {
     "hero": {
       "title": "Pour commencer, modifiez le fichier page.tsx.",
