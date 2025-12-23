@@ -1,5 +1,6 @@
 'use client';
 
+import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
 import {
@@ -10,6 +11,30 @@ import {
 import { CheckIcon } from '@/components/icons';
 import { Button } from '@/components/ui';
 import { GRADIENTS } from '@/styles';
+
+interface AnimatedPriceProps {
+  price: string;
+}
+
+/**
+ * Animated price component with smooth transition on value change.
+ */
+function AnimatedPrice({ price }: AnimatedPriceProps) {
+  return (
+    <AnimatePresence mode="wait">
+      <motion.span
+        key={price}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: -10 }}
+        transition={{ duration: 0.2, ease: 'easeOut' }}
+        className="font-inter text-5xl font-semibold tracking-tight text-neutral-900 md:text-6xl"
+      >
+        {price}
+      </motion.span>
+    </AnimatePresence>
+  );
+}
 
 interface PricingCardsSectionProps {
   isAnnual?: boolean;
@@ -119,14 +144,20 @@ export function PricingCardsSection({
                   </p>
                 </div>
                 <div className="flex items-baseline gap-2">
-                  <span className="font-inter text-5xl font-semibold tracking-tight text-neutral-900 md:text-6xl">
-                    {isAnnual ? '6€' : '8€'}
-                  </span>
-                  {isAnnual && (
-                    <span className="font-inter text-2xl text-neutral-400 line-through">
-                      8€
-                    </span>
-                  )}
+                  <AnimatedPrice price={isAnnual ? '6€' : '8€'} />
+                  <AnimatePresence>
+                    {isAnnual && (
+                      <motion.span
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.8 }}
+                        transition={{ duration: 0.2 }}
+                        className="font-inter text-2xl text-neutral-400 line-through"
+                      >
+                        8€
+                      </motion.span>
+                    )}
+                  </AnimatePresence>
                   <span className="font-inter text-lg text-neutral-600">
                     {t('premium.period')}
                   </span>
@@ -192,14 +223,20 @@ export function PricingCardsSection({
                 </div>
                 <div className="flex flex-col gap-1">
                   <div className="flex items-baseline gap-2">
-                    <span className="font-inter text-5xl font-semibold tracking-tight text-neutral-900 md:text-6xl">
-                      {isAnnual ? '15€' : '20€'}
-                    </span>
-                    {isAnnual && (
-                      <span className="font-inter text-2xl text-neutral-400 line-through">
-                        20€
-                      </span>
-                    )}
+                    <AnimatedPrice price={isAnnual ? '15€' : '20€'} />
+                    <AnimatePresence>
+                      {isAnnual && (
+                        <motion.span
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          exit={{ opacity: 0, scale: 0.8 }}
+                          transition={{ duration: 0.2 }}
+                          className="font-inter text-2xl text-neutral-400 line-through"
+                        >
+                          20€
+                        </motion.span>
+                      )}
+                    </AnimatePresence>
                     <span className="font-inter text-lg text-neutral-600">
                       {t('family.period')}
                     </span>
