@@ -26,13 +26,13 @@ export function MobileMenuActions({ onClose }: MobileMenuActionsProps) {
       </Button>
 
       <Button
-        href="#beta"
+        href="https://beta.edukai.fr"
         variant="primary"
         size="lg"
         onClick={onClose}
         className="w-full justify-center"
       >
-        {t('cta')}
+        {t('login')}
       </Button>
     </div>
   );

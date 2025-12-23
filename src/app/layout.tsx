@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getLocale, getMessages, getTranslations } from 'next-intl/server';
 
 import { Footer, Header } from '@/components';
+import { BackgroundEffects } from '@/components/ui';
 
 import type { Metadata } from 'next';
 
@@ -41,6 +42,7 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={`${inter.variable} ${outfit.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
+          <BackgroundEffects />
           <Header />
           {children}
           <Footer />

@@ -51,8 +51,8 @@ export function Header() {
               {t('language.french')}
             </Button>
 
-            <Button href="#beta" variant="primary" size="md">
-              {t('cta')}
+            <Button href="https://beta.edukai.fr" variant="primary" size="md">
+              {t('login')}
             </Button>
           </div>
 
