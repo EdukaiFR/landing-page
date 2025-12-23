@@ -1,5 +1,8 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 
+import { FadeIn } from '@/components/animations';
 import { ArrowRightIcon } from '@/components/icons';
 import { Button } from '@/components/ui';
 
@@ -10,8 +13,8 @@ export function HowItWorksCTASection() {
   const t = useTranslations('howItWorksPage.cta');
 
   return (
-    <section className="bg-surface px-4 py-16 md:py-24">
-      <div className="mx-auto max-w-3xl text-center">
+    <section className="px-4 py-16 md:py-24">
+      <FadeIn className="mx-auto max-w-3xl text-center">
         {/* Title */}
         <h2 className="font-inter text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl lg:text-4xl">
           {t('title')}
@@ -24,7 +27,7 @@ export function HowItWorksCTASection() {
 
         {/* CTA Button */}
         <Button
-          href="#beta"
+          href="/#beta"
           variant="primary"
           size="lg"
           className="mx-auto mt-8 gap-2"
@@ -35,7 +38,7 @@ export function HowItWorksCTASection() {
 
         {/* Note */}
         <p className="font-inter mt-6 text-sm text-neutral-500">{t('note')}</p>
-      </div>
+      </FadeIn>
     </section>
   );
 }

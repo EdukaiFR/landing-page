@@ -1,5 +1,12 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 
+import {
+  HoverLift,
+  StaggerContainer,
+  StaggerItem,
+} from '@/components/animations';
 import { CheckIcon } from '@/components/icons';
 import { GRADIENTS } from '@/styles';
 
@@ -67,30 +74,41 @@ export function HowItWorksMainFeaturesSection() {
   const t = useTranslations('howItWorksPage.mainFeatures');
 
   return (
-    <section className="bg-surface px-4 pb-16 md:pb-24">
-      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
+    <section className="px-4 pb-16 md:pb-24">
+      <StaggerContainer
+        className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2"
+        staggerDelay={0.2}
+      >
         {/* AI Generation Card */}
-        <FeatureCard
-          titleKey="aiGeneration.title"
-          descriptionKey="aiGeneration.description"
-          featuresKey="aiGeneration.features"
-          featureCount={4}
-          iconGradient={GRADIENTS.blueText}
-          iconBgColor="rgba(59, 130, 246, 0.1)"
-          t={t}
-        />
+        <StaggerItem direction="left">
+          <HoverLift>
+            <FeatureCard
+              titleKey="aiGeneration.title"
+              descriptionKey="aiGeneration.description"
+              featuresKey="aiGeneration.features"
+              featureCount={4}
+              iconGradient={GRADIENTS.blueText}
+              iconBgColor="rgba(59, 130, 246, 0.1)"
+              t={t}
+            />
+          </HoverLift>
+        </StaggerItem>
 
         {/* Smart Learning Card */}
-        <FeatureCard
-          titleKey="smartLearning.title"
-          descriptionKey="smartLearning.description"
-          featuresKey="smartLearning.features"
-          featureCount={4}
-          iconGradient="linear-gradient(135deg, rgb(168, 85, 247) 0%, rgb(139, 92, 246) 100%)"
-          iconBgColor="rgba(168, 85, 247, 0.1)"
-          t={t}
-        />
-      </div>
+        <StaggerItem direction="right">
+          <HoverLift>
+            <FeatureCard
+              titleKey="smartLearning.title"
+              descriptionKey="smartLearning.description"
+              featuresKey="smartLearning.features"
+              featureCount={4}
+              iconGradient="linear-gradient(135deg, rgb(168, 85, 247) 0%, rgb(139, 92, 246) 100%)"
+              iconBgColor="rgba(168, 85, 247, 0.1)"
+              t={t}
+            />
+          </HoverLift>
+        </StaggerItem>
+      </StaggerContainer>
     </section>
   );
 }
