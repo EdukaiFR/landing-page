@@ -24,7 +24,8 @@
       "label": "Changer de langue",
       "french": "FR"
     },
-    "cta": "Rejoindre la Beta"
+    "cta": "Rejoindre la Beta",
+    "login": "Se connecter"
   },
   "footer": {
     "tagline": "Toi tu révises, nous on prépare.",
@@ -88,6 +89,135 @@
     "howItWorks": {
       "title": "Simple, comme <highlight>1, 2, 3, 4 !</highlight>",
       "subtitle": "En quelques clics, transforme n'importe quel contenu de cours en expérience d'apprentissage interactive et personnalisée."
+    },
+    "testimonials": {
+      "badge": "Beta Privée",
+      "title": "Ce qu'ils pensent <highlight>d'Edukai</highlight>",
+      "subtitle": "Les retours de nos premiers utilisateurs pendant la beta privée",
+      "items": {
+        "julia": {
+          "name": "Julia",
+          "role": "Étudiante en Droit",
+          "quote": "Me permet de tester mes connaissances rapidement sur un cours que j'ai eu, très pratique !"
+        },
+        "gwen": {
+          "name": "Gwen",
+          "role": "Étudiante",
+          "quote": "La rapidité et précision de cet outil m'a redonné la curiosité et l'envie d'apprendre. Sachant que c'est qu'une Beta, j'ai hâte de voir la suite !"
+        },
+        "nathanael": {
+          "name": "Nathanaël",
+          "role": "Étudiant",
+          "quote": "Je gagne énormément de temps dans les révisions, véritable support d'apprentissage !"
+        },
+        "julien": {
+          "name": "Julien",
+          "role": "Lycéen en Première",
+          "quote": "J'ai eu l'occasion de tester Edukai pendant ma première, ça me fait gagner énormément de temps. Je peux commencer à réviser directement dans le bus ce qui fait qu'en rentrant chez moi je peux juste me reposer !"
+        }
+      }
+    },
+    "stats": {
+      "items": {
+        "timeSaved": {
+          "value": "2h",
+          "label": "Gagnées par semaine"
+        },
+        "efficiency": {
+          "value": "30s",
+          "label": "Pour générer un quiz"
+        },
+        "retention": {
+          "value": "+40%",
+          "label": "De mémorisation"
+        },
+        "improvement": {
+          "value": "3x",
+          "label": "Plus efficace"
+        }
+      }
+    },
+    "comparison": {
+      "title": "Avant vs <highlight>Après Edukai</highlight>",
+      "subtitle": "Découvre comment Edukai transforme ta façon de réviser",
+      "traditional": {
+        "title": "Méthode traditionnelle",
+        "items": {
+          "createSupports": "Passer des heures à créer des fiches",
+          "findContent": "Chercher du contenu sur internet",
+          "trackProgress": "Ne pas savoir où tu en es",
+          "stayMotivated": "Perdre la motivation rapidement"
+        }
+      },
+      "edukai": {
+        "title": "Avec Edukai",
+        "items": {
+          "createSupports": "Quiz générés en 30 secondes",
+          "findContent": "Contenu basé sur TES cours",
+          "trackProgress": "Statistiques détaillées de progression",
+          "stayMotivated": "Gamification pour rester motivé"
+        }
+      }
+    },
+    "faq": {
+      "title": "Questions <highlight>fréquentes</highlight>",
+      "items": {
+        "0": {
+          "question": "C'est vraiment gratuit pendant la beta ?",
+          "answer": "Oui ! Pendant toute la durée de la beta, l'accès à Edukai est entièrement gratuit. Tu pourras profiter de toutes les fonctionnalités sans rien payer."
+        },
+        "1": {
+          "question": "Est-ce que l'IA comprend mon type de cours ?",
+          "answer": "Notre IA est entraînée pour comprendre tous types de cours : sciences, droit, langues, histoire... Que ce soit un PDF, une image ou du texte, elle s'adapte à ton contenu."
+        },
+        "2": {
+          "question": "Mes données sont-elles sécurisées ?",
+          "answer": "Absolument. Tes cours sont stockés de manière sécurisée et ne sont jamais partagés. Tu gardes le contrôle total sur tes données."
+        },
+        "3": {
+          "question": "Ça marche pour quelles matières ?",
+          "answer": "Edukai fonctionne avec toutes les matières ! Mathématiques, physique, SVT, histoire-géo, langues, droit, économie... Notre IA s'adapte à chaque discipline."
+        }
+      }
+    },
+    "stickyCta": {
+      "button": "Rejoindre la Beta"
+    },
+    "betaSignup": {
+      "badge": "Places limitées",
+      "title": "Rejoins la Beta gratuitement",
+      "subtitle": "Fais partie des premiers à révolutionner ta façon de réviser. Accès anticipé + fonctionnalités exclusives.",
+      "benefits": {
+        "0": "Accès gratuit pendant toute la beta",
+        "1": "Nouvelles fonctionnalités en avant-première",
+        "2": "Support prioritaire de l'équipe"
+      },
+      "form": {
+        "title": "Inscris-toi maintenant",
+        "firstName": "Prénom",
+        "email": "Adresse email",
+        "studentType": "Tu es étudiant en... (optionnel)",
+        "studentTypes": {
+          "college": "Collège",
+          "lycee": "Lycée",
+          "superieur": "Études supérieures",
+          "autre": "Autre"
+        },
+        "optional": "Optionnel - nous aide à améliorer Edukai",
+        "submit": "Rejoindre la Beta",
+        "submitting": "Inscription en cours...",
+        "privacy": "En t'inscrivant, tu acceptes de recevoir des emails d'Edukai. Pas de spam, promis !",
+        "errors": {
+          "firstNameRequired": "Ton prénom est requis",
+          "emailRequired": "Ton email est requis",
+          "emailInvalid": "Cet email n'est pas valide"
+        }
+      },
+      "success": {
+        "title": "Bienvenue dans la Beta !",
+        "subtitle": "Merci {name}, tu es maintenant inscrit(e) !",
+        "description": "Tu recevras un email de confirmation avec les prochaines étapes. On a hâte de t'accueillir !"
+      }
     }
   },
   "featuresPage": {
