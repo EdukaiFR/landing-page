@@ -1,5 +1,6 @@
 'use client';
 
+import { InformationCircleIcon } from '@heroicons/react/24/outline';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 
@@ -11,6 +12,29 @@ import {
 import { CheckIcon } from '@/components/icons';
 import { Button } from '@/components/ui';
 import { GRADIENTS } from '@/styles';
+
+/** Background gradient for info badges */
+const INFO_BADGE_BG =
+  'linear-gradient(86deg, rgba(37, 99, 235, 0.15) 0%, rgba(59, 130, 246, 0.15) 100%)';
+
+interface InfoBadgeProps {
+  children: React.ReactNode;
+}
+
+/**
+ * Info badge component with icon and gradient background.
+ */
+function InfoBadge({ children }: InfoBadgeProps) {
+  return (
+    <div
+      className="flex items-center justify-center gap-2.5 self-stretch rounded-full px-5 py-2"
+      style={{ background: INFO_BADGE_BG }}
+    >
+      <InformationCircleIcon className="h-5 w-5 shrink-0 text-blue-600" />
+      <p className="font-inter text-sm font-medium text-blue-600">{children}</p>
+    </div>
+  );
+}
 
 interface AnimatedPriceProps {
   price: string;
@@ -102,21 +126,7 @@ export function PricingCardsSection({
                 </ul>
               </div>
 
-              <div
-                className="flex items-start gap-3 rounded-full px-5 py-3"
-                style={{ backgroundImage: GRADIENTS.blueGlow }}
-              >
-                <span className="text-lg">ℹ️</span>
-                <p
-                  className="font-inter bg-clip-text text-sm font-semibold"
-                  style={{
-                    WebkitTextFillColor: 'transparent',
-                    backgroundImage: GRADIENTS.blueText,
-                  }}
-                >
-                  {t('hobby.info')}
-                </p>
-              </div>
+              <InfoBadge>{t('hobby.info')}</InfoBadge>
             </div>
           </HoverLift>
         </StaggerItem>
@@ -189,21 +199,7 @@ export function PricingCardsSection({
                 </ul>
               </div>
 
-              <div
-                className="flex items-start gap-3 rounded-full px-5 py-3"
-                style={{ backgroundImage: GRADIENTS.blueGlow }}
-              >
-                <span className="text-lg">ℹ️</span>
-                <p
-                  className="font-inter bg-clip-text text-sm font-medium"
-                  style={{
-                    WebkitTextFillColor: 'transparent',
-                    backgroundImage: GRADIENTS.blueText,
-                  }}
-                >
-                  {t('premium.info')}
-                </p>
-              </div>
+              <InfoBadge>{t('premium.info')}</InfoBadge>
             </div>
           </HoverLift>
         </StaggerItem>
@@ -288,21 +284,7 @@ export function PricingCardsSection({
                 </ul>
               </div>
 
-              <div
-                className="flex items-start gap-3 rounded-full px-5 py-3"
-                style={{ backgroundImage: GRADIENTS.blueGlow }}
-              >
-                <span className="text-lg">ℹ️</span>
-                <p
-                  className="font-inter bg-clip-text text-sm font-medium"
-                  style={{
-                    WebkitTextFillColor: 'transparent',
-                    backgroundImage: GRADIENTS.blueText,
-                  }}
-                >
-                  {t('family.info')}
-                </p>
-              </div>
+              <InfoBadge>{t('family.info')}</InfoBadge>
             </div>
           </HoverLift>
         </StaggerItem>

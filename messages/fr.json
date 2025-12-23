@@ -259,7 +259,7 @@
     "hero": {
       "badge": "Plan transparent",
       "title": "Prêt à <highlight>booster</highlight> tes révisions ?",
-      "subtitle": "Accédez gratuitement • Aucune carte de crédit • Sans engagement",
+      "subtitle": "Accessible gratuitement • Aucune carte de crédit • Sans engagement",
       "billing": {
         "monthly": "Mensuel",
         "annual": "Annuel"
@@ -278,7 +278,7 @@
           "1": "Une petite fiche de révisions",
           "2": "Des statistiques sur un cours"
         },
-        "info": "Le plan idéal pour tester l'outil, sans aucune carte de crédit. Tu pourras toujours changer de plan plus tard !"
+        "info": "Le plan idéal pour tester l'outil, sans aucune carte de crédit."
       },
       "premium": {
         "name": "Premium",
