@@ -14,3 +14,6 @@ export * from './ui';
 
 // Section Components
 export * from './sections';
+
+// Animation Components
+export * from './animations';
