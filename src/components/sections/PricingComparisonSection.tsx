@@ -1,5 +1,8 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 
+import { FadeIn } from '@/components/animations';
 import { CheckIcon } from '@/components/icons';
 
 type FeatureValue = boolean | number | string;
@@ -48,7 +51,7 @@ export function PricingComparisonSection() {
 
   return (
     <section className="px-4 py-12 md:py-16">
-      <div className="mx-auto max-w-4xl">
+      <FadeIn className="mx-auto max-w-4xl">
         {/* Header */}
         <div className="mb-10 text-center">
           <h2 className="font-inter text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl lg:text-4xl">
@@ -99,7 +102,7 @@ export function PricingComparisonSection() {
             </tbody>
           </table>
         </div>
-      </div>
+      </FadeIn>
     </section>
   );
 }

@@ -20,7 +20,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function PricingPage() {
   return (
-    <main className="bg-surface min-h-screen">
+    <main className="relative min-h-screen">
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-10 xl:px-16">
         <PricingPageContent />
         <PricingComparisonSection />
