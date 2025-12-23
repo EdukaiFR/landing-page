@@ -3,7 +3,6 @@ import { getTranslations } from 'next-intl/server';
 import {
   HowItWorksCTASection,
   HowItWorksHeroSection,
-  HowItWorksMainFeaturesSection,
   HowItWorksMoreFeaturesSection,
   HowItWorksStatsSection,
 } from '@/components';
@@ -23,7 +22,6 @@ export default function HowItWorksPage() {
   return (
     <main className="min-h-screen">
       <HowItWorksHeroSection />
-      <HowItWorksMainFeaturesSection />
       <HowItWorksMoreFeaturesSection />
       <HowItWorksStatsSection />
       <HowItWorksCTASection />

@@ -15,7 +15,7 @@ export function HeroSection() {
   const t = useTranslations('home.hero');
 
   return (
-    <section className="flex flex-col items-center gap-6 px-4 py-12 text-center md:gap-9 md:py-16 lg:py-20">
+    <section className="lg:-pb-20 lg:-py-20 flex flex-col items-center gap-3 px-4 py-12 text-center md:gap-9 md:py-16">
       {/* Badge */}
       <FadeIn delay={0} direction="down">
         <div

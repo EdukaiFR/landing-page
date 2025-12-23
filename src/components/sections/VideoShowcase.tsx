@@ -10,7 +10,7 @@ import { FadeIn } from '@/components/animations';
  */
 export function VideoShowcase() {
   return (
-    <section className="relative w-full px-4 pb-8 md:pb-12 lg:pb-16">
+    <section className="lg:-pb-8 relative w-full px-4 pb-8 md:pb-12">
       {/* Edukai mascot logo - positioned behind the video */}
       <FadeIn delay={0.4} direction="down">
         <div className="relative mx-auto flex justify-center">
