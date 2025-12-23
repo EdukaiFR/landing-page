@@ -1,7 +1,10 @@
+'use client';
+
 import Image from 'next/image';
 
 import { useTranslations } from 'next-intl';
 
+import { FadeIn } from '@/components/animations';
 import { Button } from '@/components/ui';
 
 interface FeatureImage {
@@ -131,53 +134,64 @@ export function FeaturesSection() {
   return (
     <section className="flex flex-col items-center gap-12 px-4 py-12 md:gap-20 md:py-16 lg:gap-24 lg:py-20">
       {/* Header */}
-      <div className="flex flex-col items-center gap-4 text-center md:gap-6">
-        <h2 className="font-inter max-w-4xl text-4xl leading-tight font-semibold tracking-tight text-neutral-900 md:text-5xl lg:text-6xl xl:text-[77px]">
-          {t.rich('title', {
-            highlight: (chunks) => <span className="text-brand">{chunks}</span>,
-          })}
-        </h2>
-        <p className="font-inter text-neutral-light max-w-3xl text-base tracking-tight md:text-lg lg:text-xl">
-          {t('subtitle')}
-        </p>
-      </div>
+      <FadeIn>
+        <div className="flex flex-col items-center gap-4 text-center md:gap-6">
+          <h2 className="font-inter max-w-4xl text-4xl leading-tight font-semibold tracking-tight text-neutral-900 md:text-5xl lg:text-6xl xl:text-[77px]">
+            {t.rich('title', {
+              highlight: (chunks) => (
+                <span className="text-brand">{chunks}</span>
+              ),
+            })}
+          </h2>
+          <p className="font-inter text-neutral-light max-w-3xl text-base tracking-tight md:text-lg lg:text-xl">
+            {t('subtitle')}
+          </p>
+        </div>
+      </FadeIn>
 
       {/* Features */}
       <div className="flex w-full max-w-6xl flex-col gap-16 md:gap-24 lg:gap-32">
-        {FEATURES.map(({ key, images, reverse }) => (
-          <div
+        {FEATURES.map(({ key, images, reverse }, index) => (
+          <FadeIn
             key={key}
-            className={`flex flex-col items-center gap-8 md:gap-12 lg:flex-row lg:gap-16 ${
-              reverse ? 'lg:flex-row-reverse' : ''
-            }`}
+            delay={index * 0.1}
+            direction={reverse ? 'right' : 'left'}
           >
-            {/* Text Content */}
-            <div className="flex flex-col gap-4 text-center md:gap-6 lg:w-[400px] lg:shrink-0 lg:text-left">
-              <h3 className="font-inter text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl lg:text-4xl xl:text-[45px] xl:leading-tight">
-                {t(`items.${key}.title`)}
-              </h3>
-              <p className="font-inter text-neutral-light text-base leading-relaxed tracking-tight md:text-lg lg:text-xl">
-                {t(`items.${key}.description`)}
-              </p>
-            </div>
+            <div
+              className={`flex flex-col items-center gap-8 md:gap-12 lg:flex-row lg:gap-16 ${
+                reverse ? 'lg:flex-row-reverse' : ''
+              }`}
+            >
+              {/* Text Content */}
+              <div className="flex flex-col gap-4 text-center md:gap-6 lg:w-[400px] lg:shrink-0 lg:text-left">
+                <h3 className="font-inter text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl lg:text-4xl xl:text-[45px] xl:leading-tight">
+                  {t(`items.${key}.title`)}
+                </h3>
+                <p className="font-inter text-neutral-light text-base leading-relaxed tracking-tight md:text-lg lg:text-xl">
+                  {t(`items.${key}.description`)}
+                </p>
+              </div>
 
-            {/* Images */}
-            <div className="flex flex-1 items-center justify-center gap-4 lg:justify-end">
-              <FeatureImages images={images} />
+              {/* Images */}
+              <div className="flex flex-1 items-center justify-center gap-4 lg:justify-end">
+                <FeatureImages images={images} />
+              </div>
             </div>
-          </div>
+          </FadeIn>
         ))}
       </div>
 
       {/* CTA Button */}
-      <Button
-        href="#beta"
-        variant="primary"
-        size="lg"
-        className="border-4 border-white/35"
-      >
-        {t('cta')}
-      </Button>
+      <FadeIn delay={0.3}>
+        <Button
+          href="/#beta"
+          variant="primary"
+          size="lg"
+          className="border-4 border-white/35"
+        >
+          {t('cta')}
+        </Button>
+      </FadeIn>
     </section>
   );
 }

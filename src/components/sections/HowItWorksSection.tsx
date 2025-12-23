@@ -1,6 +1,15 @@
+'use client';
+
 import Image from 'next/image';
 
 import { useTranslations } from 'next-intl';
+
+import {
+  FadeIn,
+  HoverScale,
+  StaggerContainer,
+  StaggerItem,
+} from '@/components/animations';
 
 interface StepImage {
   src: string;
@@ -36,36 +45,42 @@ export function HowItWorksSection() {
   return (
     <section className="flex flex-col items-center gap-10 px-4 py-12 md:gap-14 md:py-16 lg:py-20">
       {/* Header */}
-      <div className="flex flex-col items-center gap-4 text-center md:gap-6">
-        <h2 className="font-inter max-w-4xl text-4xl leading-tight font-semibold tracking-tight text-neutral-900 md:text-5xl lg:text-6xl xl:text-[77px]">
-          {t.rich('title', {
-            highlight: (chunks) => (
-              <span className="text-brand block">{chunks}</span>
-            ),
-          })}
-        </h2>
-        <p className="font-inter text-neutral-light max-w-3xl text-base font-bold tracking-tight md:text-lg lg:text-xl">
-          {t('subtitle')}
-        </p>
-      </div>
+      <FadeIn>
+        <div className="flex flex-col items-center gap-4 text-center md:gap-6">
+          <h2 className="font-inter max-w-4xl text-4xl leading-tight font-semibold tracking-tight text-neutral-900 md:text-5xl lg:text-6xl xl:text-[77px]">
+            {t.rich('title', {
+              highlight: (chunks) => (
+                <span className="text-brand block">{chunks}</span>
+              ),
+            })}
+          </h2>
+          <p className="font-inter text-neutral-light max-w-3xl text-base font-bold tracking-tight md:text-lg lg:text-xl">
+            {t('subtitle')}
+          </p>
+        </div>
+      </FadeIn>
 
       {/* Steps Grid */}
-      <div className="grid w-full max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <StaggerContainer
+        className="grid w-full max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
+        staggerDelay={0.1}
+      >
         {STEPS.map((step, index) => (
-          <div
-            key={index}
-            className="relative overflow-hidden rounded-2xl shadow-sm transition-transform hover:scale-[1.02]"
-          >
-            <Image
-              src={step.src}
-              alt={step.alt}
-              width={354}
-              height={362}
-              className="h-auto w-full object-cover"
-            />
-          </div>
+          <StaggerItem key={index}>
+            <HoverScale scale={1.03}>
+              <div className="relative overflow-hidden rounded-2xl shadow-sm">
+                <Image
+                  src={step.src}
+                  alt={step.alt}
+                  width={354}
+                  height={362}
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+            </HoverScale>
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerContainer>
     </section>
   );
 }

@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 import { useTranslations } from 'next-intl';
 
+import { FadeIn } from '@/components/animations';
 import { ChevronDownIcon } from '@/components/icons';
 
 const FAQ_COUNT = 4;
@@ -61,7 +62,7 @@ export function FAQSection() {
 
   return (
     <section className="bg-gray-50 px-4 py-12 md:py-16 lg:py-20">
-      <div className="mx-auto max-w-3xl">
+      <FadeIn className="mx-auto max-w-3xl">
         {/* Header */}
         <h2 className="font-inter mb-10 text-center text-2xl font-semibold tracking-tight text-neutral-900 md:text-3xl lg:text-4xl">
           {t('title')}
@@ -79,7 +80,7 @@ export function FAQSection() {
             />
           ))}
         </div>
-      </div>
+      </FadeIn>
     </section>
   );
 }
