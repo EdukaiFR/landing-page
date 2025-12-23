@@ -1,5 +1,8 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 
+import { FadeIn } from '@/components/animations';
 import { Button } from '@/components/ui';
 
 /**
@@ -9,8 +12,8 @@ export function BlogNewsletterSection() {
   const t = useTranslations('blogPage.newsletter');
 
   return (
-    <section className="bg-surface px-4 py-12 md:py-16">
-      <div className="mx-auto max-w-2xl">
+    <section className="px-4 py-12 md:py-16">
+      <FadeIn className="mx-auto max-w-2xl">
         <div
           className="rounded-3xl px-6 py-10 text-center md:px-12 md:py-14"
           style={{
@@ -65,7 +68,7 @@ export function BlogNewsletterSection() {
           {/* Note */}
           <p className="font-inter mt-4 text-xs text-white/60">{t('note')}</p>
         </div>
-      </div>
+      </FadeIn>
     </section>
   );
 }
