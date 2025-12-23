@@ -1,5 +1,8 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 
+import { FadeIn } from '@/components/animations';
 import { ArrowRightIcon, HeartIcon } from '@/components/icons';
 import { Button } from '@/components/ui';
 
@@ -11,7 +14,7 @@ export function AboutCTASection() {
 
   return (
     <section className="px-4 py-16 md:py-24">
-      <div className="mx-auto max-w-4xl">
+      <FadeIn className="mx-auto max-w-4xl">
         <div
           className="relative overflow-hidden rounded-3xl px-6 py-12 md:px-12 md:py-16"
           style={{
@@ -37,7 +40,7 @@ export function AboutCTASection() {
 
             {/* CTA Button */}
             <Button
-              href="#beta"
+              href="/#beta"
               variant="outline"
               size="lg"
               className="text-brand mt-8 gap-2 border-0 bg-white hover:bg-white/90"
@@ -55,7 +58,7 @@ export function AboutCTASection() {
             </div>
           </div>
         </div>
-      </div>
+      </FadeIn>
     </section>
   );
 }

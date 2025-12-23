@@ -1,7 +1,10 @@
+'use client';
+
 import Image from 'next/image';
 
 import { useTranslations } from 'next-intl';
 
+import { FadeIn, StaggerContainer, StaggerItem } from '@/components/animations';
 import { GRADIENTS } from '@/styles';
 
 interface StepConfig {
@@ -127,7 +130,7 @@ export function AboutStorySection() {
     <section className="bg-white px-4 py-16 md:py-24">
       <div className="mx-auto max-w-6xl">
         {/* Header */}
-        <div className="mb-16 text-center">
+        <FadeIn className="mb-16 text-center">
           <h2 className="font-inter text-3xl font-semibold tracking-tight text-neutral-900 md:text-4xl lg:text-5xl">
             {t.rich('title', {
               highlight: (chunks) => (
@@ -146,14 +149,22 @@ export function AboutStorySection() {
           <p className="font-inter mx-auto mt-4 max-w-3xl text-lg font-medium text-neutral-900/80 md:text-xl">
             {t('subtitle')}
           </p>
-        </div>
+        </FadeIn>
 
         {/* Steps */}
-        <div className="flex flex-col gap-16 md:gap-20">
+        <StaggerContainer
+          className="flex flex-col gap-16 md:gap-20"
+          staggerDelay={0.2}
+        >
           {STEPS.map((step, index) => (
-            <StepCard key={step.key} step={step} index={index} t={t} />
+            <StaggerItem
+              key={step.key}
+              direction={index % 2 === 0 ? 'left' : 'right'}
+            >
+              <StepCard step={step} index={index} t={t} />
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

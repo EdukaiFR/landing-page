@@ -1,7 +1,15 @@
+'use client';
+
 import Image from 'next/image';
 
 import { useTranslations } from 'next-intl';
 
+import {
+  FadeIn,
+  HoverScale,
+  StaggerContainer,
+  StaggerItem,
+} from '@/components/animations';
 import { GRADIENTS } from '@/styles';
 
 interface ValueConfig {
@@ -41,55 +49,61 @@ export function AboutValuesSection() {
     <section className="bg-white px-4 py-16 md:py-24">
       <div className="mx-auto max-w-6xl">
         {/* Header */}
-        <h2 className="font-inter mb-12 text-center text-3xl font-semibold tracking-tight text-neutral-900 md:text-4xl lg:text-5xl">
-          {t.rich('title', {
-            highlight: (chunks) => (
-              <span
-                className="bg-clip-text"
-                style={{
-                  WebkitTextFillColor: 'transparent',
-                  backgroundImage: GRADIENTS.blueText,
-                }}
-              >
-                {chunks}
-              </span>
-            ),
-          })}
-        </h2>
+        <FadeIn>
+          <h2 className="font-inter mb-12 text-center text-3xl font-semibold tracking-tight text-neutral-900 md:text-4xl lg:text-5xl">
+            {t.rich('title', {
+              highlight: (chunks) => (
+                <span
+                  className="bg-clip-text"
+                  style={{
+                    WebkitTextFillColor: 'transparent',
+                    backgroundImage: GRADIENTS.blueText,
+                  }}
+                >
+                  {chunks}
+                </span>
+              ),
+            })}
+          </h2>
+        </FadeIn>
 
         {/* Values Grid */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <StaggerContainer
+          className="grid grid-cols-1 gap-8 md:grid-cols-3"
+          staggerDelay={0.15}
+        >
           {VALUES.map((value) => (
-            <div
-              key={value.key}
-              className="flex flex-col items-center text-center"
-            >
-              {/* Icon Container */}
-              <div
-                className="flex size-20 items-center justify-center rounded-2xl shadow-lg"
-                style={{ backgroundImage: value.gradient }}
-              >
-                <Image
-                  src={value.iconSrc}
-                  alt=""
-                  width={36}
-                  height={36}
-                  className="brightness-0 invert"
-                />
-              </div>
+            <StaggerItem key={value.key}>
+              <HoverScale>
+                <div className="flex flex-col items-center text-center">
+                  {/* Icon Container */}
+                  <div
+                    className="flex size-20 items-center justify-center rounded-2xl shadow-lg"
+                    style={{ backgroundImage: value.gradient }}
+                  >
+                    <Image
+                      src={value.iconSrc}
+                      alt=""
+                      width={36}
+                      height={36}
+                      className="brightness-0 invert"
+                    />
+                  </div>
 
-              {/* Title */}
-              <h3 className="font-inter mt-6 text-xl font-semibold tracking-tight text-neutral-900 md:text-2xl">
-                {t(`items.${value.key}.title`)}
-              </h3>
+                  {/* Title */}
+                  <h3 className="font-inter mt-6 text-xl font-semibold tracking-tight text-neutral-900 md:text-2xl">
+                    {t(`items.${value.key}.title`)}
+                  </h3>
 
-              {/* Description */}
-              <p className="font-inter mt-2 max-w-xs text-base leading-relaxed font-medium text-neutral-900/75">
-                {t(`items.${value.key}.description`)}
-              </p>
-            </div>
+                  {/* Description */}
+                  <p className="font-inter mt-2 max-w-xs text-base leading-relaxed font-medium text-neutral-900/75">
+                    {t(`items.${value.key}.description`)}
+                  </p>
+                </div>
+              </HoverScale>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
